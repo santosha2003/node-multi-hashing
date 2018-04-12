@@ -4,7 +4,6 @@
             "target_name": "multihashing",
             "sources": [
                 "multihashing.cc",
-                "scryptjane.c",
                 "scryptn.c",
                 "keccak.c",
                 "skein.c",
@@ -58,7 +57,7 @@
                 "<!(node -e \"require('nan')\")",
             ],
             "cflags_cc": [
-                "-std=c++11"
+                "-std=c++11 -maes"
             ],
         }
     ]
