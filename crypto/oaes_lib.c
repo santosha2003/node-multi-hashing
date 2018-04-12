@@ -34,7 +34,12 @@ static const char _NR[] = {
 #include <stddef.h>
 #include <time.h> 
 #include <sys/timeb.h>
-#include <malloc.h>
+
+#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
+ #include <malloc.h>
+#else
+#endif
+
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
